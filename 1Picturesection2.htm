@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>
+Computer Associates's Report Template Builder - Explora Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram8.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd29'; show_rep(rep);" alt='Diseño de Contenido Visual' shape='rect' coords='170,193,360,263'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd30'; show_rep(rep);" alt='Integración de Material Educativo' shape='rect' coords='340,303,540,373'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd31'; show_rep(rep);" alt='Personalizacion' shape='rect' coords='800,398,950,468'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd32'; show_rep(rep);" alt='Programación y Pruebas ' shape='rect' coords='560,383,710,448'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>

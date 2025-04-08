@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>
+Computer Associates's Report Template Builder - Explora Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram7.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd25'; show_rep(rep);" alt='Captura y Análisis de Información ' shape='rect' coords='195,228,435,288'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd26'; show_rep(rep);" alt='Desarrollo de la Experiencia Interactiva' shape='rect' coords='325,388,595,433'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd27'; show_rep(rep);" alt='Interacción del Usuario con el Sistema ' shape='rect' coords='620,468,860,538'>
+<AREA HREF="#" ONCLICK="var rep='PictureTabLkd28'; show_rep(rep);" alt=' Monitoreo y Ajuste en Tiempo Real' shape='rect' coords='735,303,975,373'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>
